@@ -60,37 +60,37 @@ const FOUR_CORE_SERVICES = [
 const AI_SUGGESTIONS = [
   {
     id: 1,
-    tag: 'OptiCall Bot',
+    tag: 'Meta ROAS',
     tagColor: 'text-purple-300 bg-purple-950/80 border-purple-500/80 shadow-[0_0_10px_rgba(168,85,247,0.3)]',
-    title: 'Recommend upgrading subscription to user #8492',
+    title: 'Meta Campaign #CF-902 ROAS scaled to 6.85x',
     timestamp: 'Just now'
   },
   {
     id: 2,
-    tag: 'Resolution',
+    tag: 'Google Search',
     tagColor: 'text-cyan-300 bg-cyan-950/80 border-cyan-500/80 shadow-[0_0_10px_rgba(56,189,248,0.3)]',
-    title: 'Auto-resolved 14 password reset tickets',
+    title: 'CPA reduced from $68 to $32.40 on high-intent keywords',
     timestamp: '1m ago'
   },
   {
     id: 3,
-    tag: 'Alert',
-    tagColor: 'text-rose-300 bg-rose-950/80 border-rose-500/80 shadow-[0_0_10px_rgba(244,63,94,0.3)]',
-    title: 'Spike in API latency detected. Routing support.',
+    tag: 'Creative Test',
+    tagColor: 'text-emerald-300 bg-emerald-950/80 border-emerald-500/80 shadow-[0_0_10px_rgba(16,185,129,0.3)]',
+    title: 'Winning hook variant #4 scaled to $15K/day spend',
     timestamp: '3m ago'
   },
   {
     id: 4,
-    tag: 'Attribution Engine',
+    tag: 'Retargeting',
     tagColor: 'text-indigo-300 bg-indigo-950/80 border-indigo-500/80 shadow-[0_0_10px_rgba(99,102,241,0.3)]',
-    title: 'Meta ROAS scaled to 6.4x on Campaign #CF-902',
+    title: 'High-intent custom audience CVR increased +48%',
     timestamp: '5m ago'
   },
   {
     id: 5,
-    tag: 'AI Sales Rep',
-    tagColor: 'text-emerald-300 bg-emerald-950/80 border-emerald-500/80 shadow-[0_0_10px_rgba(16,185,129,0.3)]',
-    title: 'Qualified lead & booked discovery call with Enterprise VP',
+    tag: 'Bid Optimizer',
+    tagColor: 'text-rose-300 bg-rose-950/80 border-rose-500/80 shadow-[0_0_10px_rgba(244,63,94,0.3)]',
+    title: 'Real-time bid adjustments deployed across 14 ad sets',
     timestamp: '8m ago'
   }
 ];
@@ -346,13 +346,13 @@ export function Hero() {
                 className="absolute top-3 left-3 text-[10px] font-mono text-purple-300 font-bold pointer-events-none transition-transform duration-300 drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]"
                 style={{ transform: isHovered ? 'translateZ(80px)' : 'translateZ(0px)' }}
               >
-                ┌ CF-AI ┐
+                ┌ CF-PERFORMANCE ┐
               </div>
               <div
                 className="absolute bottom-3 right-3 text-[10px] font-mono text-cyan-300 font-bold pointer-events-none transition-transform duration-300 drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]"
                 style={{ transform: isHovered ? 'translateZ(80px)' : 'translateZ(0px)' }}
               >
-                └ 3D-TELEMETRY ┘
+                └ AD-TELEMETRY ┘
               </div>
 
               {/* Card Top Glow Border */}
@@ -371,7 +371,7 @@ export function Hero() {
                   </span>
                   <Activity className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
                   <span className="text-[11px] font-mono font-extrabold text-emerald-300 uppercase tracking-widest">
-                    SYSTEM_LIVE
+                    ROAS_ENGINE_LIVE
                   </span>
                 </div>
 
@@ -382,49 +382,49 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* 2. Top Stats Row - 3 Stat Cards (3D Layer: Z-50) */}
+              {/* 2. Top Stats Row - 3 Performance Stat Cards (3D Layer: Z-50) */}
               <div
                 className="grid grid-cols-3 gap-3 mb-5 transition-transform duration-300"
                 style={{ transform: isHovered ? 'translateZ(50px)' : 'translateZ(0px)' }}
               >
-                {/* Card 1: Active Calls */}
+                {/* Card 1: Blended ROAS */}
                 <div className={`bg-[#121726]/95 border rounded-2xl p-3.5 flex flex-col justify-between transition-all shadow-lg cursor-pointer ${
                   isTick ? 'border-purple-400 shadow-[0_0_20px_rgba(168,85,247,0.4)] scale-105' : 'border-slate-800 hover:border-purple-500/60'
                 }`}>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-[11px] font-semibold text-slate-300">Active Calls</span>
+                    <span className="text-[11px] font-semibold text-slate-300">Blended ROAS</span>
                     <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-700 uppercase">
                       Live
                     </span>
                   </div>
                   <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono tracking-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-                    {activeCalls}
+                    6.85x
                   </div>
                 </div>
 
-                {/* Card 2: Email Queue */}
+                {/* Card 2: CAC Reduction */}
                 <div className="bg-[#121726]/95 border border-slate-800 rounded-2xl p-3.5 flex flex-col justify-between hover:border-rose-500/60 transition-all shadow-lg cursor-pointer">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-[11px] font-semibold text-slate-300">Email Queue</span>
-                    <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-700">
-                      -12%
+                    <span className="text-[11px] font-semibold text-slate-300">Blended CAC</span>
+                    <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700">
+                      -42%
                     </span>
                   </div>
                   <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono tracking-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-                    {emailQueue}
+                    $32.40
                   </div>
                 </div>
 
-                {/* Card 3: QA Score */}
+                {/* Card 3: Conv. Rate */}
                 <div className="bg-[#121726]/95 border border-slate-800 rounded-2xl p-3.5 flex flex-col justify-between hover:border-emerald-500/60 transition-all shadow-lg cursor-pointer">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-[11px] font-semibold text-slate-300">QA Score</span>
+                    <span className="text-[11px] font-semibold text-slate-300">Conv. Rate</span>
                     <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700">
-                      +0.8%
+                      +1.2%
                     </span>
                   </div>
                   <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono tracking-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-                    98.5%
+                    4.8%
                   </div>
                 </div>
               </div>
@@ -432,7 +432,7 @@ export function Hero() {
               {/* 3. Middle Section Split: Left AI Suggestions & Right Efficiency Gauge */}
               <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
                 
-                {/* Left Side: Live AI Suggestions Box (3D Layer: Z-65) */}
+                {/* Left Side: Live Performance Media Feed Box (3D Layer: Z-65) */}
                 <div
                   className="md:col-span-7 bg-[#121726]/95 border border-slate-800/90 rounded-2xl p-4 flex flex-col justify-between transition-transform duration-300 shadow-xl relative overflow-hidden"
                   style={{ transform: isHovered ? 'translateZ(65px)' : 'translateZ(0px)' }}
@@ -447,7 +447,7 @@ export function Hero() {
                   <div className="flex items-center gap-2 mb-3 z-10">
                     <Brain className="w-4 h-4 text-cyan-400 animate-pulse drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]" />
                     <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                      Live AI Suggestions
+                      Performance Media Telemetry
                     </h4>
                   </div>
 
@@ -498,7 +498,7 @@ export function Hero() {
                     <div className="flex items-center justify-between w-full mb-1">
                       <span className="text-[10.5px] font-semibold text-slate-300 flex items-center gap-1">
                         <Zap className="w-3.5 h-3.5 text-cyan-400 group-hover/gauge:scale-110 transition-transform" />
-                        Efficiency Rate
+                        ROAS Target Rate
                       </span>
                       <span className="text-[10px] font-mono font-bold text-emerald-400">99.4%</span>
                     </div>
@@ -545,22 +545,22 @@ export function Hero() {
                     </div>
                   </div>
 
-                  {/* Big Stat Box: 1.2K+ Tasks/hr */}
+                  {/* Big Stat Box: ₹1Cr+ Ad Spend Managed */}
                   <div className="bg-[#121726]/95 border border-slate-800 rounded-2xl p-3.5 flex flex-col justify-between shadow-xl">
                     <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono tracking-tight mb-1 drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-                      1.2K+
+                      ₹1Cr+
                     </div>
                     <div className="text-[10px] text-slate-300 font-semibold mb-2">
-                      Tasks / hr processed
+                      Profitable Ad Spend Managed
                     </div>
 
                     {/* Bottom Status Tags */}
                     <div className="flex items-center gap-1.5">
-                      <span className="text-[8.5px] font-mono font-extrabold px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700 uppercase shadow-[0_0_8px_rgba(16,185,129,0.3)]">
-                        AUTOMATION
-                      </span>
                       <span className="text-[8.5px] font-mono font-extrabold px-1.5 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-700 uppercase shadow-[0_0_8px_rgba(168,85,247,0.3)]">
-                        ACTIVE
+                        PERFORMANCE
+                      </span>
+                      <span className="text-[8.5px] font-mono font-extrabold px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700 uppercase shadow-[0_0_8px_rgba(16,185,129,0.3)]">
+                        ADS ACTIVE
                       </span>
                     </div>
                   </div>
