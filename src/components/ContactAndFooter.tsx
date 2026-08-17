@@ -523,10 +523,77 @@ export function ContactAndFooter() {
                   </>
                 )}
                 {activeModal === 'careers' && (
-                  <>
-                    <p>Cael Forge is constantly hiring top-tier media buyers, AI prompt engineers, full-stack developers, and growth strategists.</p>
-                    <p>Interested candidates should email their resume and portfolio to <strong>hello@caelforge.com</strong> with the subject line <em>&quot;Career Application - [Role]&quot;</em>.</p>
-                  </>
+                  <div className="space-y-4">
+                    <p className="text-slate-300 text-xs sm:text-sm mb-4">
+                      Join Cael Forge to build high-growth systems, performance engines, and executive brands. We are actively hiring for the following roles:
+                    </p>
+
+                    <div className="space-y-3">
+                      {/* Role 1 */}
+                      <div className="p-4 rounded-2xl bg-slate-900 border border-purple-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-[10px] font-mono font-bold text-purple-300 bg-purple-950 border border-purple-800 px-2 py-0.5 rounded uppercase">
+                              Internship
+                            </span>
+                            <span className="text-[10px] font-mono text-slate-400">Remote / Hybrid</span>
+                          </div>
+                          <h4 className="text-base font-bold text-white font-heading">B2B OUTREACH INTERN</h4>
+                          <p className="text-xs text-slate-400 mt-1">Lead generation, B2B cold email outbound setups, LinkedIn prospect research, & pipeline acceleration.</p>
+                        </div>
+                        <a
+                          href="mailto:harshvardhan@caelforge.com?subject=Career%20Application%20-%20B2B%20Outreach%20Intern"
+                          className="px-3.5 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs font-mono font-bold rounded-xl transition-all shadow-sm text-center shrink-0"
+                        >
+                          Apply Now →
+                        </a>
+                      </div>
+
+                      {/* Role 2 */}
+                      <div className="p-4 rounded-2xl bg-slate-900 border border-cyan-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-[10px] font-mono font-bold text-cyan-300 bg-cyan-950 border border-cyan-800 px-2 py-0.5 rounded uppercase">
+                              Internship
+                            </span>
+                            <span className="text-[10px] font-mono text-slate-400">Remote / Hybrid</span>
+                          </div>
+                          <h4 className="text-base font-bold text-white font-heading">SOCIAL MEDIA INTERN</h4>
+                          <p className="text-xs text-slate-400 mt-1">Short-form video editing, Reels/Shorts distribution, audience engagement, & personal brand curation.</p>
+                        </div>
+                        <a
+                          href="mailto:harshvardhan@caelforge.com?subject=Career%20Application%20-%20Social%20Media%20Intern"
+                          className="px-3.5 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs font-mono font-bold rounded-xl transition-all shadow-sm text-center shrink-0"
+                        >
+                          Apply Now →
+                        </a>
+                      </div>
+
+                      {/* Role 3 */}
+                      <div className="p-4 rounded-2xl bg-slate-900 border border-emerald-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-[10px] font-mono font-bold text-emerald-300 bg-emerald-950 border border-emerald-800 px-2 py-0.5 rounded uppercase">
+                              Full-Time / Part-Time
+                            </span>
+                            <span className="text-[10px] font-mono text-slate-400">Remote / Hybrid</span>
+                          </div>
+                          <h4 className="text-base font-bold text-white font-heading">PERFORMANCE MARKETER</h4>
+                          <p className="text-xs text-slate-400 mt-1">Meta & Google Paid Ads buying, ROAS scaling, CAC optimization, & custom landing page conversion tracking.</p>
+                        </div>
+                        <a
+                          href="mailto:harshvardhan@caelforge.com?subject=Career%20Application%20-%20Performance%20Marketer"
+                          className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-mono font-bold rounded-xl transition-all shadow-sm text-center shrink-0"
+                        >
+                          Apply Now →
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-purple-950/40 border border-purple-800/80 text-xs font-mono text-slate-300 mt-4">
+                      📩 Send your resume and portfolio to <strong className="text-purple-300">harshvardhan@caelforge.com</strong> with the subject line <em>&quot;Career Application - [Role Name]&quot;</em>.
+                    </div>
+                  </div>
                 )}
               </div>
             </motion.div>
