@@ -226,6 +226,11 @@ ${message || 'No additional message provided.'}
     }
   });
 
+  // Direct HTTP Company Logo Asset Route
+  app.get("/logo", (req, res) => {
+    res.redirect("/cael-forge-logo.png");
+  });
+
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
