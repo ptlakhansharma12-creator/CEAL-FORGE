@@ -39,7 +39,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       });
     }
 
-    const smtpUser = context.env.SMTP_USER || 'hello@evoqsolutions.co';
+    const smtpUser = context.env.SMTP_USER || 'harshvardhan@caelforge.com';
     const smtpPass = context.env.SMTP_PASS || 'Kkwkhnhdknkpnh';
 
     const emailSubject = isBookingCall 
@@ -91,7 +91,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
           await transporter.sendMail({
             from: `"Cael Forge AI" <${smtpUser}>`,
-            to: context.env.SMTP_USER || 'hello@caelforge.com',
+            to: context.env.SMTP_USER || 'harshvardhan@caelforge.com',
             subject: emailSubject,
             html: htmlBody,
             replyTo: email,

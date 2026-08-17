@@ -162,8 +162,8 @@ export function ContactAndFooter() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-slate-900 mb-1 font-heading">Direct Inquiry Email</h3>
-                    <a href="mailto:hello@caelforge.com" className="text-sm font-semibold text-blue-700 hover:text-indigo-600 transition-colors">
-                      hello@caelforge.com
+                    <a href="mailto:harshvardhan@caelforge.com" className="text-sm font-semibold text-blue-700 hover:text-indigo-600 transition-colors">
+                      harshvardhan@caelforge.com
                     </a>
                   </div>
                 </div>

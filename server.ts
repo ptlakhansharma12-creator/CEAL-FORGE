@@ -13,9 +13,9 @@ async function startServer() {
   app.use(express.json());
 
   // Credentials
-  const smtpUser = process.env.SMTP_USER || "hello@evoqsolutions.co";
+  const smtpUser = process.env.SMTP_USER || "harshvardhan@caelforge.com";
   const smtpPass = process.env.SMTP_PASS || "Kkwkhnhdknkpnh";
-  const recipientEmail = process.env.RECIPIENT_EMAIL || "hello@evoqsolutions.co";
+  const recipientEmail = process.env.RECIPIENT_EMAIL || "harshvardhan@caelforge.com";
 
   // Dynamic Multi-Provider SMTP Email Dispatcher (Titan Email / GoDaddy / Hostinger)
   async function sendEmailWithFallback(mailOptions: any) {
@@ -59,15 +59,15 @@ async function startServer() {
         console.log(`[SMTP] Email successfully sent via ${provider.name} to ${mailOptions.to}. Message ID: ${info.messageId}`);
         return info;
       } catch (err: any) {
-        console.warn(`[SMTP Warning] Provider ${provider.name} failed:`, err.message);
         lastError = err;
+        console.warn(`[SMTP] Failed sending via ${provider.name}: ${err.message}`);
       }
     }
 
-    throw lastError || new Error("All SMTP provider attempts failed");
+    throw lastError || new Error("All SMTP dispatch providers failed.");
   }
 
-  // API routes FIRST
+  // Contact / Strategy Session Booking Form Submission Endpoint
   app.post("/api/contact", async (req, res) => {
     try {
       const {
@@ -80,49 +80,49 @@ async function startServer() {
         companySize,
         challenge,
         message,
-        isBookingCall
+        isBookingCall,
       } = req.body;
 
-      if (!email || !firstName || !lastName) {
-        return res.status(400).json({ success: false, error: "First Name, Last Name, and Work Email are required." });
+      if (!firstName || !lastName || !email) {
+        return res.status(400).json({ success: false, error: "Missing required fields (First Name, Last Name, Email)" });
       }
 
       const senderName = `${firstName} ${lastName}`;
       const isBooking = Boolean(isBookingCall || preferredDate || preferredTime);
       const subject = isBooking 
-        ? `📅 Call Booking Request from ${senderName}` 
-        : `💬 New Message Inquiry from ${senderName}`;
+        ? `📅 Strategy Call Request: ${senderName}` 
+        : `💬 Website Inquiry: ${senderName}`;
       
       const textBody = `
-New Inquiry Received from EVOQ Solutions Website
+New Contact Submission Received for Cael Forge
 
-Type: ${isBooking ? 'Strategy Call Booking' : 'General Message'}
-Name: ${senderName}
+Type: ${isBooking ? 'Strategy Call Booking Request' : 'General Inquiry'}
+Full Name: ${senderName}
 Work Email: ${email}
 Phone Number: ${phone || 'Not provided'}
 Preferred Date: ${preferredDate || 'Not specified'}
-Preferred Time Slot: ${preferredTime || 'Not specified'}
+Preferred 1-Hour Time Slot: ${preferredTime || 'Not specified'}
 Company Size: ${companySize || 'Not specified'}
 Primary Challenge: ${challenge || 'Not specified'}
 
-Message:
-${message || 'No additional message provided.'}
+Additional Notes / Message:
+${message || 'No additional details provided.'}
       `.trim();
 
       const htmlBody = `
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #111; max-width: 620px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-          <div style="background-color: #0a0a0a; padding: 28px 24px; text-align: center;">
-            <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: 1px;">EVOQ Solutions</h1>
-            <p style="color: #3b82f6; margin: 6px 0 0 0; font-size: 14px; font-weight: 600;">
-              ${isBooking ? '📅 Strategy Call Booking Request' : '💬 New Contact Message'}
+          <div style="background-color: #070A12; padding: 28px 24px; text-align: center;">
+            <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: 1px;">Cael Forge Growth Systems</h1>
+            <p style="color: #7c3aed; margin: 6px 0 0 0; font-size: 14px; font-weight: 600;">
+              ${isBooking ? '📅 Strategy Call Booking Request' : '💬 New Website Contact Inquiry'}
             </p>
           </div>
           <div style="padding: 28px 24px; background-color: #ffffff;">
             
             ${isBooking ? `
-              <div style="background-color: #eff6ff; border-left: 4px solid #2563eb; padding: 14px 18px; margin-bottom: 24px; border-radius: 6px;">
-                <h3 style="color: #1e40af; margin: 0 0 6px 0; font-size: 15px;">Requested Booking Schedule</h3>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap; color: #1e3a8a; font-size: 14px;">
+              <div style="background-color: #f3e8ff; border-left: 4px solid #7c3aed; padding: 14px 18px; margin-bottom: 24px; border-radius: 6px;">
+                <h3 style="color: #6b21a8; margin: 0 0 6px 0; font-size: 15px;">Requested Booking Schedule</h3>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; color: #581c87; font-size: 14px;">
                   <div><strong>Date:</strong> ${preferredDate || 'Flexible'}</div>
                   <div><strong>1-Hour Time Slot:</strong> ${preferredTime || 'Flexible'}</div>
                 </div>
@@ -131,12 +131,12 @@ ${message || 'No additional message provided.'}
 
             <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #666; width: 35%;"><strong>Full Name:</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #666; width: 38%;"><strong>Full Name:</strong></td>
                 <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #111;">${senderName}</td>
               </tr>
               <tr>
                 <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #666;"><strong>Work Email:</strong></td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #111;"><a href="mailto:${email}" style="color: #2563eb; text-decoration: none;">${email}</a></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #111;"><a href="mailto:${email}" style="color: #7c3aed; text-decoration: none;">${email}</a></td>
               </tr>
               <tr>
                 <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #666;"><strong>Phone Number:</strong></td>
@@ -158,13 +158,13 @@ ${message || 'No additional message provided.'}
             <div style="background-color: #f9fafb; padding: 16px; border-radius: 8px; font-size: 14px; white-space: pre-wrap; color: #374151; border: 1px solid #e5e7eb;">${message ? message : 'No additional details provided.'}</div>
           </div>
           <div style="background-color: #f3f4f6; padding: 14px 24px; text-align: center; font-size: 12px; color: #6b7280;">
-            Sent automatically via EVOQ Solutions Website Contact Form
+            Sent automatically via Cael Forge Growth Systems Contact Form
           </div>
         </div>
       `;
 
       await sendEmailWithFallback({
-        from: `"EVOQ Solutions" <${smtpUser}>`,
+        from: `"Cael Forge Systems" <${smtpUser}>`,
         to: recipientEmail,
         replyTo: `"${senderName}" <${email}>`,
         subject: subject,
