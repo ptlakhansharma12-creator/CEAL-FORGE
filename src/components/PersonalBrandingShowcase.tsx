@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
-  UserCheck,
-  Mic,
-  Video,
   TrendingUp,
-  Award,
+  Video,
+  Target,
   Sparkles,
   ArrowUpRight,
   ShieldCheck,
@@ -15,7 +13,10 @@ import {
   MessageSquare,
   CheckCircle2,
   Zap,
-  ArrowRight
+  ArrowRight,
+  BarChart3,
+  Flame,
+  Layers
 } from 'lucide-react';
 
 interface CollageItem {
@@ -31,57 +32,56 @@ interface CollageItem {
 
 const collageItems: CollageItem[] = [
   {
-    id: 'stage',
-    title: 'Keynote & Global Stage Positioning',
-    subtitle: 'Elevate founder authority on premier industry stages and international summits.',
-    badge: 'KEYNOTE AUTHORITY',
-    image: '/personal-brand-stage.jpg',
-    stat: '5.2M+',
-    statLabel: 'Monthly Impressions',
+    id: 'perf-dash',
+    title: 'Precision Paid Ads & ROAS Optimization Engine',
+    subtitle: 'Data-driven media buying on Meta & Google Ads scaled to maximum profitable throughput.',
+    badge: 'PERFORMANCE MARKETING',
+    image: '/perf-marketing-dash.jpg',
+    stat: '6.85x',
+    statLabel: 'Blended ROAS Target',
     color: 'from-purple-600 to-indigo-600'
   },
   {
-    id: 'podcast',
-    title: 'Executive Podcast & Broadcast Studio',
-    subtitle: 'High-production podcasting and media appearances that build trust at scale.',
-    badge: 'PODCAST NETWORK',
-    image: '/personal-brand-podcast.jpg',
-    stat: '140K+',
-    statLabel: 'Executive Audience',
+    id: 'social-studio',
+    title: 'Cinema-Grade Short-Form Video & Reels Studio',
+    subtitle: 'High-hook vertical video reels, Shorts, and TikToks designed to dominate social feeds.',
+    badge: 'SOCIAL MEDIA BRANDING',
+    image: '/social-media-studio.jpg',
+    stat: '8.4x',
+    statLabel: 'Engagement & Reach Lift',
     color: 'from-cyan-600 to-blue-600'
   },
   {
-    id: 'media',
-    title: 'Data-Driven Content Intelligence',
-    subtitle: 'Turn complex industry insights into high-converting viral thought leadership.',
-    badge: 'CONTENT ENGINE',
-    image: '/personal-brand-media.jpg',
-    stat: '3.8x',
-    statLabel: 'Inbound Deal Velocity',
+    id: 'brand-hub',
+    title: 'Multi-Channel Organic & Paid Distribution Hub',
+    subtitle: 'Omnichannel positioning across Instagram, YouTube, LinkedIn, & TikTok for market dominance.',
+    badge: 'BRAND POSITIONING',
+    image: '/brand-positioning-hub.jpg',
+    stat: '14M+',
+    statLabel: 'Monthly Brand Views',
     color: 'from-emerald-600 to-teal-600'
   },
   {
-    id: 'studio',
-    title: 'High-Impact Video Production',
-    subtitle: 'Cinema-grade video creation engineered to capture buyer attention.',
-    badge: 'VIRAL PRODUCTION',
-    image: '/personal-brand-studio.jpg',
-    stat: '8.4x',
-    statLabel: 'Engagement Lift',
+    id: 'conversion-funnel',
+    title: 'Real-Time Attribution & Revenue Funnel Infrastructure',
+    subtitle: 'Conversion rate optimization and CAC reduction engineered directly for customer acquisition.',
+    badge: 'CONVERSION FUNNELS',
+    image: '/conversion-funnel-dash.jpg',
+    stat: '-42%',
+    statLabel: 'CAC Reduction',
     color: 'from-rose-600 to-purple-600'
   }
 ];
 
 export function PersonalBrandingShowcase() {
-  const [activeTab, setActiveTab] = useState<'positioning' | 'production' | 'distribution'>('positioning');
   const [selectedImage, setSelectedImage] = useState<CollageItem>(collageItems[0]);
 
   const CALENDLY_LINK = "https://calendly.com/harshvardhansharma676/discovery-call";
 
   return (
-    <section id="personal-branding" className="py-20 sm:py-32 bg-[#070A12] text-white relative overflow-hidden select-none border-y border-slate-800/80">
+    <section id="performance-social-branding" className="py-20 sm:py-32 bg-[#070A12] text-white relative overflow-hidden select-none border-y border-slate-800/80">
       
-      {/* Background Neon Purple Ambient Glows */}
+      {/* Background Neon Purple & Cyan Ambient Glows */}
       <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[180px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-cyan-600/15 rounded-full blur-[180px] pointer-events-none" />
 
@@ -96,23 +96,23 @@ export function PersonalBrandingShowcase() {
           className="text-center max-w-3xl mx-auto mb-16 sm:mb-20"
         >
           <span className="text-xs font-mono font-bold text-purple-300 uppercase tracking-widest px-4 py-1.5 rounded-full bg-purple-950/80 border border-purple-700/80 mb-4 inline-flex items-center gap-2 shadow-[0_0_15px_rgba(168,85,247,0.3)]">
-            <UserCheck className="w-3.5 h-3.5 text-purple-400" />
-            FOUNDER & EXECUTIVE PERSONAL BRANDING
+            <Target className="w-3.5 h-3.5 text-purple-400" />
+            PERFORMANCE MARKETING & SOCIAL MEDIA BRAND POSITIONING
           </span>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white mb-6 tracking-tight font-heading leading-tight">
-            Turn Founder Authority Into <br />
+            Precision Paid Acquisition Meets <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-400 to-indigo-300">
-              Predictable Organic Revenue
+              Viral Social Media Brand Authority
             </span>
           </h2>
           
           <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-            People buy from founders, not anonymous logos. Cael Forge builds cinema-grade executive branding, podcast engines, and viral thought leadership that convert views into high-ticket enterprise deals.
+            Growth doesn’t happen in isolation. Cael Forge combines high-yield Meta & Google paid media buying with cinema-grade short-form video production and multi-channel brand positioning to scale your customer pipeline.
           </p>
         </motion.div>
 
-        {/* 4-Image Collage Showcase Grid */}
+        {/* 4-Image Performance & Social Media Collage Showcase Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16 items-stretch">
           
           {/* Main Large Featured Hero Collage Item (7 cols) */}
@@ -142,7 +142,7 @@ export function PersonalBrandingShowcase() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
                 </span>
-                <span className="text-[10px] font-mono text-emerald-300 font-bold uppercase">LIVE SYSTEM</span>
+                <span className="text-[10px] font-mono text-emerald-300 font-bold uppercase">LIVE CAMPAIGN</span>
               </div>
             </div>
 
@@ -213,20 +213,20 @@ export function PersonalBrandingShowcase() {
 
         </div>
 
-        {/* 3 Executive Branding Deliverable Pillar Cards */}
+        {/* 3 Performance Marketing & Social Media Deliverable Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           
           <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-purple-500/60 transition-all shadow-lg group">
             <div className="w-12 h-12 rounded-xl bg-purple-950/80 border border-purple-700 flex items-center justify-center text-purple-400 mb-4 group-hover:scale-110 transition-transform">
-              <Mic className="w-6 h-6" />
+              <TrendingUp className="w-6 h-6" />
             </div>
-            <h4 className="text-lg font-bold text-white mb-2 font-heading">Podcast & Media Studio</h4>
+            <h4 className="text-lg font-bold text-white mb-2 font-heading">Performance Paid Media Buying</h4>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal mb-4">
-              End-to-end podcast production, sound design, and guest booking that positions founders alongside industry titans.
+              Meta & Google Ads management focused strictly on profitable ROAS scaling, creative ad set testing, and CAC reduction.
             </p>
             <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-purple-400">
               <CheckCircle2 className="w-4 h-4 text-purple-400" />
-              <span>100% Turnkey Production</span>
+              <span>ROAS & Revenue Attributed</span>
             </div>
           </div>
 
@@ -234,27 +234,27 @@ export function PersonalBrandingShowcase() {
             <div className="w-12 h-12 rounded-xl bg-cyan-950/80 border border-cyan-700 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-110 transition-transform">
               <Video className="w-6 h-6" />
             </div>
-            <h4 className="text-lg font-bold text-white mb-2 font-heading">Short-Form Video Engine</h4>
+            <h4 className="text-lg font-bold text-white mb-2 font-heading">Social Media & Video Studio</h4>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal mb-4">
-              High-hook, cinema-grade reels, Shorts, and TikToks edited specifically to capture enterprise B2B buyer interest.
+              Cinema-grade vertical Reels, Shorts, and viral video creation engineered for multi-channel organic and paid social distribution.
             </p>
             <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-cyan-400">
               <CheckCircle2 className="w-4 h-4 text-cyan-400" />
-              <span>Multi-Platform Distribution</span>
+              <span>Multi-Platform Reach</span>
             </div>
           </div>
 
           <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/60 transition-all shadow-lg group">
             <div className="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-700 flex items-center justify-center text-emerald-400 mb-4 group-hover:scale-110 transition-transform">
-              <TrendingUp className="w-6 h-6" />
+              <Layers className="w-6 h-6" />
             </div>
-            <h4 className="text-lg font-bold text-white mb-2 font-heading">Thought Leadership & PR</h4>
+            <h4 className="text-lg font-bold text-white mb-2 font-heading">Custom Conversion Funnels</h4>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal mb-4">
-              Ghostwritten LinkedIn essays, newsletters, and press features that drive qualified inbound discovery calls.
+              High-converting landing pages, real-time attribution tracking, and automated lead routing that turn attention into revenue.
             </p>
             <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-emerald-400">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Revenue-Attributed Authority</span>
+              <span>High Conversion Rate</span>
             </div>
           </div>
 
@@ -264,10 +264,10 @@ export function PersonalBrandingShowcase() {
         <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-purple-950/80 via-slate-900 to-indigo-950/80 border border-purple-500/40 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_20px_50px_rgba(168,85,247,0.15)]">
           <div>
             <span className="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest mb-1 block">
-              READY TO SCALE YOUR FOUNDER AUTHORITY?
+              READY TO SCALE YOUR PAID & ORGANIC GROWTH SYSTEM?
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
-              Build Your Personal Brand Engine Today
+              Build Your Performance & Social Brand Engine
             </h3>
           </div>
 
