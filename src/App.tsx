@@ -6,9 +6,8 @@ import { Hero } from './components/Hero';
 import { Logos } from './components/Logos';
 import { About } from './components/About';
 import { Services } from './components/Services';
-import { DataAnalyticsDashboard } from './components/DataAnalyticsDashboard';
-import { PerformanceMarketingGuide } from './components/PerformanceMarketingGuide';
 import { FounderLetter } from './components/FounderLetter';
+import { PerformanceMarketingGuide } from './components/PerformanceMarketingGuide';
 import { AiAdvantage } from './components/AiAdvantage';
 import { FeaturesGrid } from './components/FeaturesGrid';
 import { Process } from './components/Process';
@@ -47,9 +46,8 @@ export default function App() {
           <Logos />
           <About />
           <Services />
-          <DataAnalyticsDashboard />
-          <PerformanceMarketingGuide />
           <FounderLetter />
+          <PerformanceMarketingGuide />
           <AiAdvantage />
           <FeaturesGrid />
           <Process />
