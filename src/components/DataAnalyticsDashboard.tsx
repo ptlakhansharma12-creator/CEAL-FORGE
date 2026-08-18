@@ -326,18 +326,18 @@ export function DataAnalyticsDashboard() {
         >
           <span className="text-xs font-mono font-bold text-purple-700 uppercase tracking-widest px-4 py-1.5 rounded-full bg-purple-50 border border-purple-200 mb-4 inline-flex items-center gap-2 shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-purple-600" />
-            REAL-TIME AI DATA ANALYTICS & INSIGHT ENGINE
+            PERFORMANCE MARKETING & SOCIAL MEDIA BRAND POSITIONING ANALYTICS
           </span>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight font-heading leading-tight">
-            Turn Raw Campaign Data Into <br />
+            Turn Paid Ads & Viral Social Media Streams Into <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-violet-600 to-indigo-600">
-              Real-Time Actionable Growth Insights
+              Real-Time Revenue Attribution & Brand Growth
             </span>
           </h2>
           
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Our real-time AI data analytics engine continuously parses campaign telemetry, detects performance anomalies live, and executes automated optimizations to compound your return on ad spend.
+            Our telemetry engine continuously parses Meta, Google Ads, Reels, and organic social streams, optimizing ROAS while scaling brand positioning in real time.
           </p>
         </motion.div>
 
@@ -357,10 +357,10 @@ export function DataAnalyticsDashboard() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
-                  <span>LIVE TELEMETRY STREAMING</span>
+                  <span>LIVE PERFORMANCE & SOCIAL MEDIA STREAMING</span>
                   <span className="text-[10px] text-slate-500 font-normal">({lastSyncTime})</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 font-heading">Real-Time Revenue Telemetry Engine</h3>
+                <h3 className="text-lg font-bold text-slate-900 font-heading">Performance Marketing & Brand Telemetry Engine</h3>
               </div>
             </div>
 
@@ -433,14 +433,14 @@ export function DataAnalyticsDashboard() {
               }`}
             >
               <div className="flex items-center justify-between text-xs font-mono font-semibold text-slate-500 mb-2">
-                <span>REAL-TIME REVENUE</span>
+                <span>PAID AD REVENUE</span>
                 <DollarSign className="w-4 h-4 text-purple-600 group-hover:scale-110 transition-transform" />
               </div>
               <div className="text-xl sm:text-3xl font-extrabold text-slate-900 font-heading mb-1 font-mono">
                 ${revenue.toLocaleString()}
               </div>
               <div className="text-[11px] sm:text-xs font-mono font-bold text-emerald-600 flex items-center gap-1">
-                <ArrowUpRight className="w-3.5 h-3.5" /> +34.2% YoY (Live)
+                <ArrowUpRight className="w-3.5 h-3.5" /> +34.2% ROAS (Live)
               </div>
             </div>
 
@@ -449,7 +449,7 @@ export function DataAnalyticsDashboard() {
               className="bg-slate-50 border border-slate-200/90 rounded-2xl p-4 sm:p-5 hover:border-purple-400 hover:bg-purple-50/40 transition-all cursor-pointer shadow-sm group"
             >
               <div className="flex items-center justify-between text-xs font-mono font-semibold text-slate-500 mb-2">
-                <span>BLENDED ROAS</span>
+                <span>BLENDED AD ROAS</span>
                 <TrendingUp className="w-4 h-4 text-purple-600 group-hover:scale-110 transition-transform" />
               </div>
               <div className="text-xl sm:text-3xl font-extrabold text-slate-900 font-heading mb-1 font-mono">
@@ -461,18 +461,18 @@ export function DataAnalyticsDashboard() {
             </div>
 
             <div
-              onClick={() => triggerToast(`${qualifiedLeads.toLocaleString()} inbound leads qualified with 98.4% match accuracy.`)}
+              onClick={() => triggerToast(`14.2M social media brand views generated across Reels, YouTube & Instagram.`)}
               className="bg-slate-50 border border-slate-200/90 rounded-2xl p-4 sm:p-5 hover:border-purple-400 hover:bg-purple-50/40 transition-all cursor-pointer shadow-sm group"
             >
               <div className="flex items-center justify-between text-xs font-mono font-semibold text-slate-500 mb-2">
-                <span>AI QUALIFIED LEADS</span>
+                <span>SOCIAL BRAND VIEWS</span>
                 <Bot className="w-4 h-4 text-purple-600 group-hover:scale-110 transition-transform" />
               </div>
               <div className="text-xl sm:text-3xl font-extrabold text-slate-900 font-heading mb-1 font-mono">
-                {qualifiedLeads.toLocaleString()}
+                14.2M
               </div>
               <div className="text-[11px] sm:text-xs font-mono font-bold text-indigo-600 flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600" /> 98.4% Match Accuracy
+                <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600" /> 8.4x Viral Reach
               </div>
             </div>
 
