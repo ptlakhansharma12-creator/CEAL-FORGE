@@ -5,37 +5,37 @@ import { ChevronDown, BrainCircuit, Cpu, Network, Zap, Sparkles, TrendingUp, Arr
 
 const caseStudies = [
   {
-    client: 'Restaurant & Hospitality Brand (Noida)',
-    category: 'Hospitality & F&B',
-    result: 'Consistent Profitability',
+    client: 'International Market Entry — Tanzania',
+    category: 'Global Expansion',
+    result: 'End-to-End Client Acquisition',
     metrics: [
-      { label: 'Online Orders', val: '3× Increase' },
-      { label: 'Walk-ins', val: '2× Growth' },
+      { label: 'Client', val: 'Prem Heat' },
+      { label: 'Market', val: 'Tanzania' },
+      { label: 'Scope', val: 'End-to-End' },
+    ],
+    summary: 'Helped Prem Heat International acquire their first clients in Tanzania starting with a small ad budget, managing the complete sales cycle end-to-end rather than just running ads.',
+  },
+  {
+    client: 'Lead Quality Improvement — B2B',
+    category: 'Lead Qualification',
+    result: 'Higher-Intent Qualified Leads',
+    metrics: [
+      { label: 'Client', val: 'Bharat Trading' },
+      { label: 'Focus', val: 'Lead Quality' },
+      { label: 'Outcome', val: 'Higher Intent' },
+    ],
+    summary: 'Worked with Bharat Trading Corporation to improve lead quality by restructuring their lead form with more qualifying questions, resulting in fewer but significantly more qualified, higher-intent leads.',
+  },
+  {
+    client: 'Local Business Turnaround — Noida Restaurant',
+    category: 'Local Business',
+    result: 'Turnaround to Profitability',
+    metrics: [
+      { label: 'Location', val: 'Noida' },
+      { label: 'Channels', val: 'Zomato & Creators' },
       { label: 'Status', val: 'Profitable' },
     ],
-    summary: 'Took the business from 7 months of breaking even to consistent profitability with integrated performance & local discovery engines.',
-  },
-  {
-    client: 'Cross-Industry Ad Management',
-    category: 'Paid Media Scale',
-    result: '₹1Cr+ Deployed',
-    metrics: [
-      { label: 'Profitable Spend', val: '₹1Cr+' },
-      { label: 'Campaigns', val: 'High-Growth' },
-      { label: 'Efficiency', val: 'Optimized' },
-    ],
-    summary: '₹1Cr+ in profitable ad spend deployed across high-growth campaigns with unit economics discipline.',
-  },
-  {
-    client: 'Pipeline Acceleration',
-    category: 'AI Lead Automation',
-    result: '< 60s Response Time',
-    metrics: [
-      { label: 'Previous Time', val: '4 Hours' },
-      { label: 'New Response', val: '< 60 Sec' },
-      { label: 'Qualification', val: 'Automated' },
-    ],
-    summary: 'Automated lead qualification cut initial response times from 4 hours down to under 60 seconds.',
+    summary: 'Partnered with a Noida-based restaurant that had been operating at a loss for over a year. Used Zomato ads to grow online orders and awareness campaigns plus influencer collaborations to drive walk-ins, taking the business from loss to breakeven, and for the first time, into profit.',
   },
 ];
 
