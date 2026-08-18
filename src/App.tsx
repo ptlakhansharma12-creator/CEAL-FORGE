@@ -7,6 +7,7 @@ import { Logos } from './components/Logos';
 import { About } from './components/About';
 import { Services } from './components/Services';
 import { DataAnalyticsDashboard } from './components/DataAnalyticsDashboard';
+import { PerformanceMarketingGuide } from './components/PerformanceMarketingGuide';
 import { FounderLetter } from './components/FounderLetter';
 import { AiAdvantage } from './components/AiAdvantage';
 import { FeaturesGrid } from './components/FeaturesGrid';
@@ -47,6 +48,7 @@ export default function App() {
           <About />
           <Services />
           <DataAnalyticsDashboard />
+          <PerformanceMarketingGuide />
           <FounderLetter />
           <AiAdvantage />
           <FeaturesGrid />
