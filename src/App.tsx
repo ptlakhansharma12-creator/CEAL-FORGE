@@ -7,7 +7,7 @@ import { Logos } from './components/Logos';
 import { About } from './components/About';
 import { Services } from './components/Services';
 import { DataAnalyticsDashboard } from './components/DataAnalyticsDashboard';
-import { PersonalBrandingShowcase } from './components/PersonalBrandingShowcase';
+import { FounderLetter } from './components/FounderLetter';
 import { AiAdvantage } from './components/AiAdvantage';
 import { FeaturesGrid } from './components/FeaturesGrid';
 import { Process } from './components/Process';
@@ -47,7 +47,7 @@ export default function App() {
           <About />
           <Services />
           <DataAnalyticsDashboard />
-          <PersonalBrandingShowcase />
+          <FounderLetter />
           <AiAdvantage />
           <FeaturesGrid />
           <Process />
